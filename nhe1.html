@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Never Have I Ever....</title>
+	<style>
+		body {
+			background-image: url("7.jpg");
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h1 {
+			font-size: 5rem;
+			text-align: center;
+			color: rgb(255, 255, 255);
+			text-shadow: 2px 2px 2px rgba(110, 107, 107, 0.5);
+		}
+		button {
+			font-size: 2rem;
+			padding: 1rem 2rem;
+			background-color: #06acff;
+			color: rgb(0, 0, 0);
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin: 1rem;
+		}
+
+		button:hover {
+			background-color: #8f059ceb;
+		}
+
+		p {
+			font-size: 2rem;
+			text-align: center;
+			color: rgb(255, 255, 255);
+			max-width: 80%;
+			margin: 0 auto;
+			padding: 2rem;
+			background-color: rgba(0, 0, 0, 0.8);
+			border-radius: 4px;
+		}
+
+		a {
+			font-size: 2rem;
+			padding: 1rem 2rem;
+			background-color: #06acff;
+			color: rgb(0, 0, 0);
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin: 1rem;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		a:hover {
+			background-color: #8f059ceb;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Never Have I Ever....</h1>
+	</header>
+	<main>
+		<button id="start-btn">Start Game</button>
+		<a href="rules.html">How to play</a>
+	</main>
+	<script>
+		document.getElementById("start-btn").addEventListener("click", function() {
+			location.href = "game.html";
+		});
+	</script>
+</body>
+</html>

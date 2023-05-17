@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Questions</title>
+	<style>
+		body {
+			
+            background-image: url("6.jpg");
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h1 {
+			font-size: 4rem;
+			text-align: center;
+			color: #ffffff;
+			margin-top: 2rem;
+		}
+
+		p {
+			font-size: 2rem;
+			text-align: center;
+			color: #ffffff;
+			margin: 2rem;
+		}
+
+		button {
+			font-size: 1rem;
+			padding: 1rem 2rem;
+			background-color: #000000;
+			color: rgb(255, 255, 255);
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin-top: 2rem;
+  position: fixed;
+  bottom: 200px;
+  right: 650px;
+  z-index: 9999;
+  
+		}
+
+		button:hover {
+			background-color: #8f059ceb;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Random Questions</h1>
+	</header>
+	<main>
+		<p id="question">Press the button to generate a never have I ever question</p>
+		<button onclick="generateQuestion()">Generate</button>
+	</main>
+	<script>
+		var questions = [
+        "NNever have I ever laughed so hard that I peed my pants",
+"Never have I ever accidentally sent a text message to the wrong person",
+"Never have I ever snorted while laughing",
+"Never have I ever worn mismatched shoes or socks in public",
+"Never have I ever gotten stuck in a piece of furniture",
+"Never have I ever walked into a glass door or window",
+"Never have I ever tripped in public and pretended it was intentional",
+"Never have I ever mistaken a stranger for someone I knew and tried to start a conversation",
+"NNever have I ever accidentally eaten something that wasn't meant to be eaten.",
+"Never have I ever fallen asleep during a movie in the movie theater",
+    ]
+		function generateQuestion() {
+			var questionIndex = Math.floor(Math.random() * questions.length);
+			document.getElementById("question").innerHTML = questions[questionIndex];
+		}
+	</script>
+</body>
+</html>

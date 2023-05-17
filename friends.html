@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friends Questions</title>
+	<style>
+		body {
+			
+            background-image: url("6.jpg");
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h1 {
+			font-size: 4rem;
+			text-align: center;
+			color: #ffffff;
+			margin-top: 2rem;
+		}
+
+		p {
+			font-size: 2rem;
+			text-align: center;
+			color: #ffffff;
+			margin: 2rem;
+		}
+
+		button {
+			font-size: 1rem;
+			padding: 1rem 2rem;
+			background-color: #000000;
+			color: rgb(255, 255, 255);
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin-top: 2rem;
+  position: fixed;
+  bottom: 200px;
+  right: 650px;
+  z-index: 9999;
+  
+		}
+
+		button:hover {
+			background-color: #8f059ceb;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Friends</h1>
+	</header>
+	<main>
+		<p id="question">Press the button to generate a never have I ever question</p>
+		<button onclick="generateQuestion()">Generate</button>
+	</main>
+	<script>
+		var questions = [
+        "Never have I ever lied to a friend to avoid doing something",
+"Never have I ever had a crush on a friend's sibling",
+"Never have I ever stolen something from a friend",
+"Never have I ever forgotten a friend's birthday",
+"Never have I ever gotten into a fight with a friend over something petty",
+"Never have I ever had a one night stand with a friend",
+"Never have I ever given a fake phone number to a friend",
+"Never have I ever skipped a friend's party to hang out with someone else",
+"Never have I ever hooked up with a friend's ex",
+"Never have I ever betrayed a friend's confidence",
+    ]
+		function generateQuestion() {
+			var questionIndex = Math.floor(Math.random() * questions.length);
+			document.getElementById("question").innerHTML = questions[questionIndex];
+		}
+	</script>
+</body>
+</html>

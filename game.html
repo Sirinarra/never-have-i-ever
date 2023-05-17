@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Never Have I Ever</title>
+	<style>
+		body {
+			background-image: url("6.jpg");
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h1 {
+			font-size: 5rem;
+			text-align: center;
+			color: rgb(255, 253, 253);
+			text-shadow: 2px 2px 2px rgba(110, 107, 107, 0.5);
+			margin-top: 2rem;
+		}
+    
+        button {
+		font-size: 1rem;
+		padding: 1rem 2rem;
+		background-color: #000000;
+		color: rgb(255, 255, 255);
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-bottom: 4rem;
+        position: absolute;
+  		bottom: 2rem;
+  		left: 50%;
+  		transform: translateX(-50%);
+	}
+
+	button:hover {
+		background-color: #8f059ceb;
+	}
+		.genres-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 1rem;
+		}
+
+		.genre {
+			width: 10rem;
+			height: 10rem;
+			background-color:none;
+			border-radius: 5px;
+			margin: 1rem;
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.genre:hover {
+			background-color: #000000c2;
+			transform: scale(1.05);
+		}
+
+		.genre h2 {
+			font-size: 2rem;
+			text-align: center;
+			color: rgb(255, 253, 253);
+		}
+		.genre img {
+			width: 5rem;
+			height: 5rem;
+			margin-bottom: 1rem;
+		}
+       
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Choose a genre to play</h1>
+	</header>
+	<main>
+		<div class="genres-container">
+			<div class="genre" onclick="friends('Friends')">
+				<img src="https://img.freepik.com/premium-vector/time-with-friends-neon-signs-style-text_118419-1466.jpg?w=2000" alt="Friends">
+				<h2>Friends</h2>
+			</div>
+			<div class="genre" onclick="party('Party')">
+				<img src="https://images.jdmagicbox.com/rep/b2b/indoor-neon-sign-board/indoor-neon-sign-board-4.png" alt="Party">
+				<h2>Party</h2>
+			</div>
+			<div class="genre" onclick="funny('Funny')">
+				<img src="https://img.freepik.com/premium-vector/have-fun-neon-signs-style-text_77399-785.jpg?w=2000" alt="Funny">
+				<h2>Funny</h2>
+			</div>
+			<div class="genre" onclick="random('Random')">
+				<img src="https://static.planetminecraft.com/files/image/minecraft/data-pack/2021/951/14872921-images_l.jpg" alt="General">
+				<h2>Random</h2>
+			</div>
+			<div class="genre" onclick="add('Add your own')">
+				<img src="https://images-cdn.ubuy.co.in/634ee0a9c334c2024913368f-custom-neon-sign-for-room-decor-birthday.jpg" alt="Add your own">
+                <h2>Add your own</h2>
+                </div>
+                </div>
+                <button onclick="goToHome()">Back</button>
+            </main>
+                <script>
+        	function goToHome() {
+			window.location.href = "nhe1.html";
+		}
+        function friends(genre) {
+    window.location.href = `Friends.html?genre=${genre}`;
+}
+        function party(genre) {
+    window.location.href = `Party.html?genre=${genre}`;
+}
+function funny(genre) {
+    window.location.href = `Funny.html?genre=${genre}`;
+}
+function random(genre) {
+    window.location.href = `Random.html?genre=${genre}`;
+}
+function add(genre) {
+    window.location.href = `add.html?genre=${genre}`;
+}
+
+
+                </script>
+                </body>
+                </html>
+            

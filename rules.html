@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to play</title>
+	<style>
+
+		body {
+			background-image: url("5.jpg");
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+        }
+
+		h1 {
+			font-size: 5rem;
+			text-align: center;
+			color: rgb(255, 255, 255);
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  			position: absolute;
+  			top: 50px;
+		}
+
+        p {
+			font-size: 2rem;
+			text-align: center;
+			color: rgb(255, 255, 255);
+			max-width: 80%;
+			margin-bottom: 80px;
+            padding: 6rem;
+		border-radius: 1px;
+		line-height: 1.5;
+	}
+
+
+	button {
+		font-size: 1rem;
+		padding: 1rem 2rem;
+		background-color: #000000;
+		color: rgb(255, 255, 255);
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-bottom: 200px;
+        position: absolute;
+  		bottom: 2rem;
+  		left: 50%;
+  		transform: translateX(-50%);
+	}
+
+	button:hover {
+		background-color: #8f059ceb;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<h1>How to play</h1>
+	</header>
+	<main>
+		<p>The game involves reading a series of 'Never have I ever...' statements aloud. <br> Any player who has done the action mentioned must take a sip of their drink or eat a piece of candy, depending on the rules of the group.</br> Players usually count score by the number of sips or pieces of candy eaten.</p>
+		<button id="back-btn">Back</button>
+	</main>
+	<script>
+		document.getElementById("back-btn").addEventListener("click", function() {
+			location.href = "nhe1.html";
+		});
+	</script>
+</body>
+</html>

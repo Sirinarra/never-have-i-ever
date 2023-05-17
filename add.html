@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Never Have I Ever</title>
+	<style>
+		body {
+			background-image: url("5.jpg");
+			background-size: cover;
+			background-position: center;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-family: sans-serif;
+		}
+
+		h1 {
+			font-size: 5rem;
+			text-align: center;
+			color: rgb(0, 0, 0);
+			text-shadow: 2px 2px 2px rgba(110, 107, 107, 0.5);
+			margin-top: 4rem;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.8);
+			padding: 2rem;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(99, 97, 97, 0.3);
+			margin-top: 0rem;
+			width: 50%;
+		}
+
+		form label {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			color: rgb(255, 255, 255);
+		}
+
+		form input[type="text"] {
+			font-size: 1.5rem;
+			padding: 0.5rem;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 2rem;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		button {
+			font-size: 1.5rem;
+			padding: 1rem 2rem;
+			background-color: #000000;
+			color: rgb(255, 255, 255);
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin-bottom: 0rem;
+			position: absolute;
+			bottom: 2rem;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		button:hover {
+			background-color: #8f059ceb;
+		}
+
+		.question-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.8);
+			padding: 2rem;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(83, 83, 83, 0.3);
+			margin-top: 2rem;
+			width: 50%;
+		}
+
+		.question {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+			color: rgb(255, 255, 255);
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Custom Never Have I Ever</h1>
+	</header>
+	<main>
+		<form>
+			<label for="new-question">Add your own question:</label>
+			<input type="text" id="new-question" name="new-question">
+			<button type="button" onclick="addQuestion()">Add</button>
+		</form>
+		<div class="question-container">
+			<h2>Generated question:</h2>
+			<button type="button" onclick="generateQuestion()">Generate Question</button>
+		</div>
+	</main>
+    <script>
+        const questions = [];
+    
+        function addQuestion() {
+            const newQuestion = document.getElementById("new-question").value;
+            if (newQuestion.trim() !== "") {
+                questions.push(newQuestion.trim());
+                alert("Question added!");
+                document.getElementById("new-question").value = "";
+            }
+        }
+    
+        function generateQuestion() {
+            const questionContainer = document.querySelector(".question-container");
+            if (questions.length > 0) {
+                const randomIndex = Math.floor(Math.random() * questions.length);
+                const generatedQuestion = questions[randomIndex];
+                questionContainer.querySelector("p").textContent = generatedQuestion;
+            } else {
+                questionContainer.querySelector("p").textContent = "No questions available";
+            }
+        }
+    </script>
+</body>
+</html>    
